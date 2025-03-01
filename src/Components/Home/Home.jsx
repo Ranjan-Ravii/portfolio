@@ -85,8 +85,6 @@
 
 // export default Home;
 
-
-
 import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
@@ -101,41 +99,41 @@ const Home = () => {
   const sequences = ['RAVI', 'RANJAN', 'RAVI RANJAN'];
 
   return (
-    <div className="bg-[#254169] min-h-screen relative">
+    <div className="bg-[#254169] min-h-screen relative overflow-hidden">
       {/* Main content container */}
       <div className="container mx-auto h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
           {/* Left content */}
-          <div className="flex items-center justify-center lg:justify-start px-4 lg:px-8 relative z-10">
-            <div className="space-y-8">
-              <div className="text-left">
-                <span className="text-2xl md:text-3xl font-bold text-gray-300 tracking-wide block mb-2">
+          <div className="flex items-center justify-center lg:justify-start px-4 lg:px-8 relative z-10 py-8 md:py-0">
+            <div className="space-y-4 md:space-y-8">
+              <div className="text-center lg:text-left">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-300 tracking-wide block mb-1 md:mb-2">
                   Hello, I'M
                 </span>
-                <h1 className="font-righteous text-6xl md:text-8xl font-bold tracking-wide text-white leading-tight">
+                <h1 className="font-righteous text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-wide text-white leading-tight">
                   <span className="text-[#FF6500] drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">RAVI</span>
                   <br />
                   <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">RANJAN</span>
                 </h1>
               </div>
 
-              <div className="inline-flex flex-wrap  items-center gap-3 px-8 py-4 bg-[#1E3E62] rounded-full shadow-lg backdrop-blur-sm bg-opacity-90">
-                <span className="text-gray-300 font-medium font-righteous">
+              <div className="inline-flex flex-wrap items-center gap-2 md:gap-3 px-4 sm:px-6 md:px-8 py-2 md:py-4 bg-[#1E3E62] rounded-full shadow-lg backdrop-blur-sm bg-opacity-90">
+                <span className="text-sm sm:text-base md:text-lg text-gray-300 font-medium font-righteous">
                   Web Development
                 </span>
                 <span className="text-[#FF6500]">•</span>
-                <span className="text-gray-300 font-medium font-righteous">
+                <span className="text-sm sm:text-base md:text-lg text-gray-300 font-medium font-righteous">
                   Webflow Developer
                 </span>
                 <span className="text-[#FF6500]">•</span>
-                <span className="text-gray-300 font-medium font-righteous">
+                <span className="text-sm sm:text-base md:text-lg text-gray-300 font-medium font-righteous">
                   UI Designer
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right content - Image */}
+          {/* Right content - Image (desktop only) */}
           <div className="hidden lg:block relative">
             <div 
               className="absolute inset-0 bg-contain bg-no-repeat bg-center"
@@ -150,9 +148,12 @@ const Home = () => {
 
       {/* Mobile image - only shows on smaller screens */}
       <div 
-        className="lg:hidden absolute inset-0 bg-contain bg-no-repeat bg-right-bottom opacity-30 z-0"
+        className="lg:hidden absolute inset-0 bg-contain bg-no-repeat bg-bottom opacity-30 z-0"
         style={{
-          backgroundImage: "url('/developerImage.png')"
+          backgroundImage: "url('/developerImage.png')",
+          backgroundSize: "90% auto", // Reduced size for mobile
+          backgroundPosition: "center bottom 10%",
+          maxHeight: "100vh"
         }}
       />
     </div>
