@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Currency Converter",
     description: "A full-stack currency converter with React.",
-    image: "public/currency.jpg",
+    image: "/currency.jpg",
     github: "https://github.com/Ranjan-Ravii/currency-converter",
     live: "https://ranjan-ravii.github.io/currency-converter/",
     tech: ["React", "Tailwind", "Currency API"]
@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Password Generator",
     description: "Modern way to generate strong password.",
-    image: "public/password.jpg",
+    image: "/password.jpg",
     github: "https://github.com/Ranjan-Ravii/password-generator",
     live: "https://ranjan-ravii.github.io/password-generator/",
     tech: ["React", "Tailwind"]
