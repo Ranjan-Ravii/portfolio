@@ -73,7 +73,7 @@ const About = () => {
 
   <button
     className="px-6 py-3 rounded inline-flex items-center gap-2 bg-[#FF6500] text-white hover:bg-[#1E3E62] transition-colors duration-300"
-    onClick={() => window.open("https://drive.google.com/file/d/1K9c51r62LPwci30R3-F9ILgx7JupgTtJ/view", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/18jmLg2TyDej7yvs1M8KgqqOfDNxO1Uv0/view?usp=sharing", "_blank")}
   >
     Download CV
     <svg
